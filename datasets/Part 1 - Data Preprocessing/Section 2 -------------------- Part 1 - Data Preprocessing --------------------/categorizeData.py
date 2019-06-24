@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
-#Function for definying a set of values (it is or not)
+#Function for definying a clasification not a range of values
 def categorizeData(X, col, y ):
     oneHotEncoder = ColumnTransformer(
         transformers=[

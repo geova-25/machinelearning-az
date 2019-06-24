@@ -10,7 +10,7 @@ import numpy as np
 
 import categorizeData
 import importData
-import threatNaN
+import fixMissingValues
 
 
 #To divide in test and train set
@@ -20,7 +20,7 @@ from sklearn.model_selection import train_test_split
 X,y = importData.importDataFromCSV("Data.csv")
 
 #Change the NaNs
-X = threatNaN.changeNaNs(X, np.nan, "mean")
+X = fixMissingValues.changeNaNs(X, np.nan, "mean")
 
 #Categorize non numerical data
 X, y = categorizeData.categorizeData(X, 0, y)
